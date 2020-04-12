@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+#include<conio.h>
+class a
+{ 
+ public:
+ 	int n1;
+ 	void getdata()
+	 {
+ 	cout<<"enter the value of first number"<<endl;
+ 	cin>>n1;
+     }
+};
+
+class b:public a
+{ 
+  public:
+  	int n2;
+  	void putdata()
+  	{
+	cout<<"enter the value of second number is";
+  	cin>>n2;
+	}
+  	
+};
+
+class c:public b
+{
+	public:
+		int n3;
+		int z;
+		void check()
+		{cout<<" enter the third value is";
+		 cin>>n3;
+		}
+		void multiply()
+		{ z=n1*n2*n3;
+		cout<<" product of the three number is"<<z;
+		}
+		
+};
+
+int main()
+{ c a1;
+  a1.getdata();
+  a1.putdata();
+  a1.check();
+  a1.multiply();
+  getch();
+}
